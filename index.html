@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Generator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: azure;
+            
+        }
+
+        :root{
+            height: 100%;
+            width: 100%
+        }
+
+        #main{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 20px;
+            align-items: center ;
+            height: 100vh;
+            width: 100vw;
+            background-color: #1b1a1a;
+        }
+        
+        #searchBox{
+            height: 300px;
+            width: 500px;
+            background-color: #222;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content:first baseline;
+            gap: 40px;
+            border: 3px inset black;
+            border-radius: 30px;
+
+        }
+        #searchBox:hover{
+            height: 305px;
+            width: 505px;
+        }
+        #namePh{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 8px;
+        }
+        input{
+            border-radius: 9px;
+            background-color: rgb(207, 215, 222);
+            border: 2px outset rgb(255, 98, 0);
+            height: 20px;
+            color: rgb(223, 75, 11);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+        input:hover{
+           border: 2.5px outset rgb(255, 21, 0);
+        }
+        #prof{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #info{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        #sub{
+            display: flex;
+            justify-content: center;
+            
+            
+        }
+        label{
+            position: relative;
+            left: 5px;
+        }
+        #inform{
+            position: relative;
+            right: 20px;
+            bottom: 15px;
+            height: 80px;
+            width: 450px;
+            
+        }
+        #btn{
+            position: relative;
+            bottom: 20px;
+            width: 100px;
+            height: 30px;
+            background-color: rgb(224, 62, 3);
+            color: azure;
+            
+        }
+        #btn:hover{
+            background-color: rgb(255, 60, 0);
+            width: 103px;
+        }
+        #proff{
+            position: relative;
+            right: 16px;
+        }
+        #link{
+            position: relative;
+            right: 10px;
+        }
+       
+
+     #phn{
+            position: relative; 
+            right: 5px;
+     }
+
+     .cardSpace{
+
+        height: 230px;
+        width: 420px;
+        border: 1px solid white;
+        border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+     }
+
+     .image{
+        position: relative;
+        top: 10px;
+        left: 10px;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        
+     }
+     .nameStyle{
+        position: relative;
+        left: 5px;
+     }
+     
+     .profession{
+        position: relative;
+        top: 13px;
+        
+     }
+     .phone{
+        padding: 3px;
+        position: relative;
+        left:15px;
+        
+     }
+     .para{
+        position: relative;
+        bottom: -14px;
+        left: 14px;
+        padding: 3px;
+       
+     }
+     .name-prof{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 3px;
+       margin: 2px
+     }
+    </style>
+</head>
+<body>
+    <div id="main">
+<h3>CUSTOM CARD GENERATOR</h3>
+    <form id="searchBox">
+        
+        <div id="namePh">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <label for="phn">Phone:</label>
+            <input type="phone" id="phn">
+        </div>
+
+        <div id="prof">
+            <label for="prof">Profession: </label>
+            <input type="text" id="proff">
+            <label for="link">Link: </label>
+            <input type="text" id="link">
+        </div>
+
+        <div id="info">
+            <label for="info">Additional Information:</label>
+            <input type="info" id="inform">
+        </div>
+
+        <div id="sub">
+            <input type="submit" id="btn">
+        </div>
+
+    </form>
+
+    
+
+    <script src="scripts.js"></script>
+</div>
+</body>
+</html>
