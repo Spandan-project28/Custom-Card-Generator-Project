@@ -3,15 +3,18 @@ let main=document.querySelector("#main");
 let formInputs=document.querySelectorAll("input");
 // let cardLayout=document.createElement("div");
 // let img=document.createElement("img");
+let load=document.querySelector("#load");
 
 
 form.addEventListener("submit",(det)=>{
 
     det.preventDefault();
+//removes hiden from loader
+    load.classList.remove("hidden");
 
-
-    console.log(formInputs);
-//card outer part
+    setTimeout(() => {
+        load.classList.add("hidden");
+        //card outer part
     let cardLayout=document.createElement("div");
     main.appendChild(cardLayout);
     cardLayout.classList.add("cardSpace")
@@ -50,5 +53,9 @@ let info=document.createElement("p");
 info.textContent= formInputs[4].value;
 info.classList.add("para");
 cardLayout.appendChild(info);
+    }, 1500);
+
+    console.log(formInputs);
+
 
 });
